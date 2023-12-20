@@ -1,7 +1,7 @@
 ![Alt text](image1.png)
 
 
-What is Ansible and How to Install and Configure?
+Ansible and How to Install and Configure?
 
 Ansible is an open-source automation tool that is used for configuration management, application deployment, and task automation. It simplifies complex tasks by allowing you to define tasks and configurations in a declarative manner, making it easier to manage and scale IT infrastructure. Ansible uses a simple and human-readable syntax (YAML) for defining tasks, and it operates over SSH by default, making it agentless.
 
