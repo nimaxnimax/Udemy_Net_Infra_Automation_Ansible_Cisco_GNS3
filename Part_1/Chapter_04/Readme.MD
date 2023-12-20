@@ -2,7 +2,7 @@ Basic Cisco Router and Switch Verification with Ansible
 
 
 **********
-Here are some basic Cisco router verification commands that you can use to check the status and configuration of your router and switch:
+Here are some basic cisco router verification commands that you can use to check the status and configuration of your router and switch:
 
 1. **Show Interfaces:**
    ```
