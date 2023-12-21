@@ -1,6 +1,22 @@
 Basic Cisco Router and Switch Verification with Ansible
 
 
+**Linux Commands**
+   ```
+   cat /etc/hosts
+   sudo vi /etc/hosts
+
+   ping r1
+   ping sw1
+
+   ifconfig
+   ip addr
+   arp
+
+   
+   ```
+
+
 **********
 Here are some basic cisco router verification commands that you can use to check the status and configuration of your router and switch:
 
