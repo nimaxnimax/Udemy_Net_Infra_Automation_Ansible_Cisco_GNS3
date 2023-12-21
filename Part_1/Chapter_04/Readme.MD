@@ -53,10 +53,14 @@ ansible-playbook -i ansible_hosts if_desc.yml
 
 ansible-playbook -i ansible_hosts uptime.yml
 
+ansible-playbook -i ansible_hosts if_up.yml
+
+ansible-playbook -i ansible_hosts mtu.yml
+
 ```
 
 **********
-Here are some basic cisco router verification commands that you can use to check the status and configuration of your router and switch:
+Here are some basic cisco router or switch verification commands that you can use to check the status and configuration of your router and switch:
 
 1. **Show Interfaces:**
    ```
@@ -129,4 +133,78 @@ Here are some basic cisco router verification commands that you can use to check
     This command shows the configured access lists on the router, including their rules and hit counts.
 
 Remember that the specific commands and their output may vary depending on the router model and the IOS (Internetwork Operating System) version running on the device. Additionally, some commands may require privileged EXEC mode, which you can enter using the `enable` command.
+
+Here are some additional cisco router or switch verification commands:
+
+11. **Show Interface [interface type and number]:**
+    ```
+    show interface <interface-type>/<interface-number>
+    ```
+
+    This command provides detailed information about a specific interface, including its status, configuration, and traffic statistics.
+
+12. **Show Controllers [interface type and number]:**
+    ```
+    show controllers <interface-type>/<interface-number>
+    ```
+
+    This command displays information about the physical layer characteristics and statistics for a specific interface.
+
+13. **Show IP Interface [interface type and number]:**
+    ```
+    show ip interface <interface-type>/<interface-number>
+    ```
+
+    This command shows detailed information about a specific IP interface, including its IP address, subnet mask, and protocol status.
+
+14. **Show IP Route [specific network or destination]:**
+    ```
+    show ip route <network or destination>
+    ```
+
+    Use this command to display the routing table for a specific network or destination.
+
+15. **Show IP EIGRP [AS number] Topology:**
+    ```
+    show ip eigrp topology
+    ```
+
+    If EIGRP (Enhanced Interior Gateway Routing Protocol) is running, this command displays the EIGRP routing topology.
+
+16. **Show IP OSPF Neighbor:**
+    ```
+    show ip ospf neighbor
+    ```
+
+    This command displays information about OSPF (Open Shortest Path First) neighbors and their status.
+
+17. **Show VLAN:**
+    ```
+    show vlan
+    ```
+
+    This command shows information about VLANs configured on the router.
+
+18. **Show Logging:**
+    ```
+    show logging
+    ```
+
+    This command displays the router's logging configuration and recent log messages.
+
+19. **Show IP NAT Translations:**
+    ```
+    show ip nat translations
+    ```
+
+    If Network Address Translation (NAT) is configured, this command displays the active NAT translations.
+
+20. **Show Crypto Isakmp SA:**
+    ```
+    show crypto isakmp sa
+    ```
+
+    This command displays the Internet Security Association and Key Management Protocol (ISAKMP) Security Associations (SAs) on the router.
+
+Remember to replace `<interface-type>/<interface-number>` and `<network or destination>` with the specific interface type and number or network/destination you are interested in.
 
