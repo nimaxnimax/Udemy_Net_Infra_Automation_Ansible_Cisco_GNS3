@@ -1,9 +1,9 @@
 ---
-- name: Manage GNS3 devices
+- name: Manage GNS3 Cisco LAB
   hosts: routers, switches
   gather_facts: false
   connection: local
- 
+  
   tasks:
     - name: Obtain Login Information
       include_vars: secrets.yml
@@ -17,14 +17,11 @@
           auth_pass: "{{ creds['auth_pass'] }}"
           timeout: 60
 
-    - name: Configuration
-      ios_config:
+    - name: Verification
+      ios_command:
         provider: "{{ provider }}"
-        lines:
-          - service timestamps debug datetime msec localtime
-          - service timestamps log datetime msec localtime
-          - service password-encryption
-          - service tcp-keepalives-in
-          - service tcp-keepalives-out
-          - service sequence-numbers
-        save_when: modified
+        commands:
+          - show run | sec line vty
+      register: if_data
+    - debug:
+        var: if_data['stdout_lines'][0]

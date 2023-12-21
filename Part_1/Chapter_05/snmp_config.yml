@@ -21,10 +21,5 @@
       ios_config:
         provider: "{{ provider }}"
         lines:
-          - service timestamps debug datetime msec localtime
-          - service timestamps log datetime msec localtime
-          - service password-encryption
-          - service tcp-keepalives-in
-          - service tcp-keepalives-out
-          - service sequence-numbers
+          - snmp-server community public RO
         save_when: modified

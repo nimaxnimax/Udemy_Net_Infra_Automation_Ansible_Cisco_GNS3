@@ -1,6 +1,6 @@
 ---
 - name: Manage GNS3 devices
-  hosts: routers, switches
+  hosts: sw4, sw5, sw6
   gather_facts: false
   connection: local
  
@@ -21,10 +21,9 @@
       ios_config:
         provider: "{{ provider }}"
         lines:
-          - service timestamps debug datetime msec localtime
-          - service timestamps log datetime msec localtime
-          - service password-encryption
-          - service tcp-keepalives-in
-          - service tcp-keepalives-out
-          - service sequence-numbers
+          - vlan 10
+          - name DATA
+          - vlan 20
+          - name VOICE
+          - spanning-tree vlan 1,10,20 priority 4096
         save_when: modified
