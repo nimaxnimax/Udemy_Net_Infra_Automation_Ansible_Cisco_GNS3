@@ -44,8 +44,9 @@ write memory
 This is a basic setup, and in a production environment, you'd likely use more advanced security measures. Always follow best practices and security guidelines when configuring network devices.
 
 
-**********
-Linux Commands
+### Linux Commands:
+
+```bash
 
 ifconfig
 
@@ -55,12 +56,15 @@ ip addr
 
 ssh -oHostKeyAlgorithms=ssh-rsa 192.168.122.11
 
+```
 
-**********
-Linux >> Add >> File: /etc/ssh/ssh_config
+### Linux >> Add >> File: /etc/ssh/ssh_config
+
+```bash
 
 KexAlgorithms=curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1
 
 Ciphers aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,3des-cbc
 
+```
 
