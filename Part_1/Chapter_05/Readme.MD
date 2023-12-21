@@ -13,7 +13,29 @@ cd Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3/Part_1/Chapter_05
 
 ls -anp | grep yml
 
-ansible-playbook -i ansible_hosts service.yml
+ansible-playbook -i ansible_hosts aaa_check.yml
+
+ansible-playbook -i ansible_hosts aaa_config.yml
+
+ansible-playbook -i ansible_hosts logging_check.yml
+
+ansible-playbook -i ansible_hosts logging_config.yml
+
+ansible-playbook -i ansible_hosts service_check.yml
+
+ansible-playbook -i ansible_hosts service_config.yml
+
+ansible-playbook -i ansible_hosts snmp_check.yml
+
+ansible-playbook -i ansible_hosts snmp_config.yml
+
+ansible-playbook -i ansible_hosts telnet_ssh_timeout_check.yml
+
+ansible-playbook -i ansible_hosts telnet_ssh_timeout_config.yml
+
+ansible-playbook -i ansible_hosts vlan_config.yml
+
+ansible-playbook -i ansible_hosts vlan_show.yml
 
 ```
 
