@@ -3,6 +3,7 @@
   hosts: routers, switches
   gather_facts: false
   connection: local
+
   tasks:
     - name: Obtain Login Information
       include_vars: secrets.yml
