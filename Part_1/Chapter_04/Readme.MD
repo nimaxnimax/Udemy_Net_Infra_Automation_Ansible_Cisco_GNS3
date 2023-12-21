@@ -11,9 +11,15 @@ sudo apt update -y
 
 sudo apt install git -y
 
+cd $home
+
 git clone https://github.com/nimaxnimax/Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3.git
 
+cd Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3/Part_1/Chapter_04
+
 git pull
+
+ls -anp
 
 ifconfig
 
