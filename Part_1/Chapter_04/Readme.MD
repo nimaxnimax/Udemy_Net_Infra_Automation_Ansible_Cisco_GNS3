@@ -1,21 +1,31 @@
+![Alt text](image4.png)
+
+
 Basic Cisco Router and Switch Verification with Ansible - GNS3 Cisco Routing & Switching Lab
 
 
 **Linux Commands**
-   ```
-   cat /etc/hosts
-   sudo vi /etc/hosts
+```bash
 
-   ping r1
-   ping sw1
+ifconfig
 
-   ifconfig
-   ip addr
-   arp
+arp
+
+ip addr
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@192.168.122.11
+
+cat /etc/hosts
+
+sudo vi /etc/hosts
+
+ping r1
+
+ping sw1
 
 
-   ```
 
+```
 
 **********
 Here are some basic cisco router verification commands that you can use to check the status and configuration of your router and switch:
