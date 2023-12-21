@@ -7,13 +7,25 @@ Basic Cisco Router and Switch Verification with Ansible - GNS3 Cisco Routing & S
 **Linux Commands**
 ```bash
 
+sudo apt update -y
+
+sudo apt install git -y
+
+git clone https://github.com/nimaxnimax/Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3.git
+
+git pull
+
 ifconfig
 
 arp
 
 ip addr
 
+ping 192.168.122.11
+
 ssh -oHostKeyAlgorithms=ssh-rsa ansible@192.168.122.11
+
+rm -f /home/nima/.ssh/known_hosts
 
 cat /etc/hosts
 
@@ -23,7 +35,23 @@ ping r1
 
 ping sw1
 
+ls -anp
 
+cat ansible_hosts
+
+cat secrets.yml
+
+ls -anp | grep yml
+
+ansible-playbook -i ansible_hosts interface_ip.yml
+
+ansible-playbook -i ansible_hosts arp.yml
+
+ansible-playbook -i ansible_hosts cdp.yml
+
+ansible-playbook -i ansible_hosts if_desc.yml
+
+ansible-playbook -i ansible_hosts uptime.yml
 
 ```
 
