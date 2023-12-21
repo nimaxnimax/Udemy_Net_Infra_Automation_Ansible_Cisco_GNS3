@@ -43,3 +43,13 @@ write memory
 
 This is a basic setup, and in a production environment, you'd likely use more advanced security measures. Always follow best practices and security guidelines when configuring network devices.
 
+
+**********
+Linux Commands
+
+ifconfig
+
+arp
+
+ip addr
+
