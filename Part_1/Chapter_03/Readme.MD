@@ -54,7 +54,7 @@ arp
 
 ip addr
 
-ssh -oHostKeyAlgorithms=ssh-rsa 192.168.122.11
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@192.168.122.11
 
 ```
 
