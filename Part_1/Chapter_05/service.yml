@@ -28,6 +28,5 @@
           - service tcp-keepalives-out
           - service sequence-numbers
         # save_when: modified
-      register: if_data
-    - debug:
-        var: if_data['stdout_lines'][0]
+      register: print_output
+    - debug: var=print_output
