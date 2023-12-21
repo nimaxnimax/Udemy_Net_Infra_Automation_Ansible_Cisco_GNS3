@@ -53,3 +53,5 @@ arp
 
 ip addr
 
+ssh -oHostKeyAlgorithms=ssh-rsa 192.168.122.11
+
