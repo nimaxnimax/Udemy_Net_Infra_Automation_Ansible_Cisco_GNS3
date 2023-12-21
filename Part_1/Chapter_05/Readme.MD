@@ -13,7 +13,7 @@ cd Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3/Part_1/Chapter_05
 
 ls -anp | grep yml
 
-ansible-playbook -i ansible_hosts interface_ip.yml
+ansible-playbook -i ansible_hosts service.yml
 
 ```
 
