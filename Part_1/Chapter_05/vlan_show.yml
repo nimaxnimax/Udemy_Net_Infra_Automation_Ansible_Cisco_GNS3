@@ -21,7 +21,7 @@
       ios_command:
         provider: "{{ provider }}"
         commands:
-          - show vlans
+          - show vlan
           - show run | in span
       register: if_data
     - debug:
