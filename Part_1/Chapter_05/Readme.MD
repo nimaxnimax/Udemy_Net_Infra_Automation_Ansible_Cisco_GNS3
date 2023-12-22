@@ -37,6 +37,42 @@ ansible-playbook -i ansible_hosts vlan_config.yml
 
 ansible-playbook -i ansible_hosts vlan_show.yml
 
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@r1
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@r1
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@r2
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@sw1
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@sw2
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@sw3
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@sw4
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@sw5
+
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@sw6
+
+ping r1
+
+ping r1
+
+ping r2
+
+ping sw1
+
+ping sw2
+
+ping sw3
+
+ping sw4
+
+ping sw5
+
+ping sw6
+
 ```
 
 **********
