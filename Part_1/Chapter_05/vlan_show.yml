@@ -1,6 +1,6 @@
 ---
 - name: Manage GNS3 Cisco LAB
-  hosts: routers, switches
+  hosts: sw4, sw5, sw6
   gather_facts: false
   connection: local
   
