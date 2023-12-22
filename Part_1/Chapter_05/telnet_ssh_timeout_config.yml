@@ -22,5 +22,6 @@
         provider: "{{ provider }}"
         lines:
           - line vty 0 15
-          - exec-timeout 10 0
+          - session-timeout 1
+          - exec-timeout 1 0
         save_when: modified
