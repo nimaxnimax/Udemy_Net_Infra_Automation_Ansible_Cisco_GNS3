@@ -1,6 +1,6 @@
 ---
 - name: Manage GNS3 devices
-  hosts: routers, switches
+  hosts: switches
   gather_facts: false
   connection: local
  
