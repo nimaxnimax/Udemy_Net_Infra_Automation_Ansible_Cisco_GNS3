@@ -25,4 +25,5 @@
           - aaa authentication login default local
           - line vty 0 15
           - login authentication default
+          - privilege level 15
         save_when: modified
