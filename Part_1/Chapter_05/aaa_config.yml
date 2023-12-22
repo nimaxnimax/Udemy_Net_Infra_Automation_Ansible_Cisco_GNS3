@@ -22,4 +22,7 @@
         provider: "{{ provider }}"
         lines:
           - aaa new-model
+          - aaa authentication login default local
+          - line vty 0 15
+          - login authentication default
         save_when: modified
