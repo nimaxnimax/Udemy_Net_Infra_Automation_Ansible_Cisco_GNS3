@@ -15,7 +15,7 @@
           username: "{{ creds['username'] }}"
           password: "{{ creds['password'] }}"
           auth_pass: "{{ creds['auth_pass'] }}"
-          timeout: 60
+          timeout: 120
 
     - name: Verification
       ios_command:
