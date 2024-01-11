@@ -131,7 +131,8 @@ ansible-playbook -i ansible_hosts interface_ip.yml
 How to Check Interface Speed Duplex with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts interface_speed_duplex_run_config.yml
+ansible-playbook -i ansible_hosts interface_speed_duplex.yml
 ```
 
 **********
