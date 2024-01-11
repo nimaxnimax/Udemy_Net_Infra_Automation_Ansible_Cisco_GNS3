@@ -41,26 +41,14 @@ Instructor & Courses >> https://www.udemy.com/user/adrian-fischer-infotech/
 
 **********
 
-Review Ansible Installation and Configuration
+Review Ansible Installation and Configuration + Git Repository
 
 ```bash
-
-```
-
-**********
-
-GNS3 and How to Install and Configure Routers and Switches for Cisco Ansible Lab?
-
-```bash
-
-```
-
-**********
-
-GNS3 and How to Install and Configure Routers and Switches for Cisco Ansible Lab?
-
-```bash
-
+sudo apt update -y
+sudo apt install ansible -y
+ansible --version
+sudo apt install git -y
+git clone https://github.com/nimaxnimax/Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3.git
 ```
 
 **********
