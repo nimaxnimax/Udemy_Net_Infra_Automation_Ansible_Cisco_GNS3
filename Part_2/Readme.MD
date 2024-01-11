@@ -148,7 +148,7 @@ ansible-playbook -i ansible_hosts interface_CRC.yml
 How to Change Passwords on Routers/Switches with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts username_password_enable_secret.yml
 ```
 
 **********
