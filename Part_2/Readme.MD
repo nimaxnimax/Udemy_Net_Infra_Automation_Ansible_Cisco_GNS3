@@ -121,7 +121,9 @@ ansible-playbook -i ansible_hosts hostname_config_and_check.yml
 How to Check Interfaces on Routers/Switches with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts if_desc.yml
+ansible-playbook -i ansible_hosts if_up.yml
+ansible-playbook -i ansible_hosts interface_ip.yml
 ```
 
 **********
