@@ -173,7 +173,7 @@ ansible-playbook -i ansible_hosts vlan_config_3725_3745_switch.yml
 How to Config SVI Interface VLANs on vIOS & 3725/3745 MLS Switches and Verify with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts interface_vlan_svi_config_switches_mls.yml
 ```
 
 **********
