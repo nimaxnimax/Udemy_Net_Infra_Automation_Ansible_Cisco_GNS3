@@ -165,7 +165,7 @@ ansible-playbook -i ansible_hosts vlan_checking_vios.yml
 How to Config VLANs on 3725/3745 Ether Switches and Verify with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts vlan_config_3725_3745_switch.yml
 ```
 
 **********
