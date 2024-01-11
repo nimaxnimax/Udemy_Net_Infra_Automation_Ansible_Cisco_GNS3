@@ -156,7 +156,7 @@ ansible-playbook -i ansible_hosts username_password_enable_secret.yml
 How to Config VLANs on vIOS L2 Switches and Verify with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts vlan_config_vios_switch.yml
 ```
 
 **********
