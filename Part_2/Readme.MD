@@ -157,6 +157,7 @@ How to Config VLANs on vIOS L2 Switches and Verify with Ansible?
 
 ```bash
 ansible-playbook -i ansible_hosts vlan_config_vios_switch.yml
+ansible-playbook -i ansible_hosts vlan_checking_vios.yml
 ```
 
 **********

@@ -17,21 +17,30 @@
           auth_pass: "{{ creds['auth_pass'] }}"
           timeout: 120
 
-    - name: Configuration
-      ios_config:
+    - name: Verification
+      ios_command:
         provider: "{{ provider }}"
-        lines:
-          - vlan 15
-          - name Accounting
-          - vlan 17
-          - name Engineering
-        save_when: modified
+        commands:
+          - show span vlan 1
+      register: if_data
+    - debug:
+        var: if_data['stdout_lines'][0]
 
     - name: Verification
       ios_command:
         provider: "{{ provider }}"
         commands:
-          - show vlan
+          - show span vlan 15
       register: if_data
     - debug:
         var: if_data['stdout_lines'][0]
+
+    - name: Verification
+      ios_command:
+        provider: "{{ provider }}"
+        commands:
+          - show span vlan 17
+      register: if_data
+    - debug:
+        var: if_data['stdout_lines'][0]
+
