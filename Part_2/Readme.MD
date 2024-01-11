@@ -189,7 +189,8 @@ ansible-playbook -i ansible_hosts mls_config_and_routing.yml
 How to Check CDP and IP Addresses on Routers/Switches with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts cdp.yml 
+ansible-playbook -i ansible_hosts cdp_detail.yml 
 ```
 
 **********
