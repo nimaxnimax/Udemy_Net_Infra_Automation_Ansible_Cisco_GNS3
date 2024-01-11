@@ -195,43 +195,27 @@ ansible-playbook -i ansible_hosts cdp_detail.yml
 
 **********
 
-How to Configure Access Ports on L2 Switches with Ansible?
+How to Configure Access Ports & Trunk Ports on L2 L3 Switches with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts access_and_trunk_port_config_switches.yml
 ```
 
 **********
 
 How to Configure Default Gateway on L2 Switches with Ansible?
 
-```bash
-
-```
-
 **********
 
 How to Change Speed and Duplex Config on Routers and Switches with Ansible?
-
-```bash
-
-```
 
 **********
 
 How to Check Connectivity in the Network on Routers/Switches with Ansible?
 
-```bash
-
-```
-
 **********
 
 How to Configure Static Routing with Ansible?
-
-```bash
-
-```
 
 **********
 
