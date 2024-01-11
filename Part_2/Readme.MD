@@ -53,10 +53,15 @@ git clone https://github.com/nimaxnimax/Udemy_Net_Infra_Automation_Ansible_Cisco
 
 **********
 
-GNS3 and How to Install and Configure Routers and Switches for Cisco Ansible Lab?
+GNS3 and How to Install and Configure Routers and Switches for Cisco Ansible Lab? And Play a YAML File
 
 ```bash
-
+cd Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3/Part_2
+ls -anp
+cat ansible_hosts
+cat secrets.yml
+cat /etc/hosts
+ansible-playbook -i ansible_hosts arp.yml
 ```
 
 **********
@@ -64,7 +69,9 @@ GNS3 and How to Install and Configure Routers and Switches for Cisco Ansible Lab
 Review Configuring Cisco Routers & Switches for Basic Connectivity (Console/Telnet) and Cisco IOS Automation with Ansible
 
 ```bash
-
+ansible-playbook -i ansible_hosts telnet_ssh_timeout_config.yml 
+ansible-playbook -i ansible_hosts telnet_console_username_password_config.yml 
+ansible-playbook -i ansible_hosts telnet_ssh_timeout_check.yml 
 ```
 
 **********
@@ -72,7 +79,12 @@ Review Configuring Cisco Routers & Switches for Basic Connectivity (Console/Teln
 Cisco Router & Switch Verification with Ansible (GNS3 Cisco Routing & Switching Lab)
 
 ```bash
-
+ansible-playbook -i ansible_hosts version_check.yml
+ansible-playbook -i ansible_hosts version_interface.yml 
+ansible-playbook -i ansible_hosts version_uptime.yml 
+ansible-playbook -i ansible_hosts version_memory.yml 
+ansible-playbook -i ansible_hosts version_ios.yml 
+ansible-playbook -i ansible_hosts version_check.yml
 ```
 
 **********

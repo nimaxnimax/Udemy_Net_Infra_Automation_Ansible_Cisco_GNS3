@@ -1,6 +1,6 @@
 ---
-- name: Manage GNS3 devices
-  hosts: sw1
+- name: Manage GNS3 Cisco LAB
+  hosts: routers, switches
   gather_facts: false
   connection: local
  
@@ -17,12 +17,12 @@
           auth_pass: "{{ creds['auth_pass'] }}"
           timeout: 60
 
-    - name: Configuration
-      ios_config:
+    - name: Verification
+      ios_command:
         provider: "{{ provider }}"
-        lines:
-          - line vty 0 15
-          - session-timeout 1
-          - exec-timeout 1 0
-        save_when: modified
+        commands:
+          - show version | in uptime
+      register: if_data
+    - debug:
+        var: if_data['stdout_lines'][0]
 
