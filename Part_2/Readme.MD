@@ -92,7 +92,9 @@ ansible-playbook -i ansible_hosts version_check.yml
 Cisco Router & Switch SSH Configuration with Ansible
 
 ```bash
-
+ansible-playbook -i ansible_hosts ssh_config.yml 
+ssh-keygen -f "/home/adrian/.ssh/known_hosts" -R "sw1"
+ssh -oHostKeyAlgorithms=ssh-rsa ansible@sw1
 ```
 
 **********
