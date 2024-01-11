@@ -3,6 +3,12 @@
 
 Udemy Course >> Network Infrastructure Automation with Ansible + Cisco (CCT/CCNA) GNS3 Part 2
 
+**********
+
+Ansible Automation YAML Network Administration Cisco Infrastructure Deployment Programming Engineering GNS3 CCT CCNA P2
+
+**********
+
 Topics:
 - Review Ansible Installation and Configuration
 - GNS3 and How to Install and Configure Routers and Switches for Cisco Ansible Lab?
@@ -26,6 +32,12 @@ Topics:
 - How to Change Speed and Duplex Config on Routers and Switches with Ansible?
 - How to Check Connectivity in the Network on Routers/Switches with Ansible?
 - How to Configure Static Routing with Ansible?
+
+**********
+
+Tips/Tricks/Notes/Commands URL Link: https://github.com/nimaxnimax/Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3/tree/main/Part_2
+
+Instructor & Courses >> https://www.udemy.com/user/adrian-fischer-infotech/
 
 **********
 
