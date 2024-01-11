@@ -113,7 +113,7 @@ ansible-playbook -i ansible_hosts mac_address_table_vios_check_count.yml
 How to Change Hostname on Routers/Switches with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts hostname_config_and_check.yml
 ```
 
 **********
