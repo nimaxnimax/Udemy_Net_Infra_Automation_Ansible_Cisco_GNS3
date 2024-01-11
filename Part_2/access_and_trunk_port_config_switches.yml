@@ -25,14 +25,32 @@
           - switchport access vlan 11
           - switchport mode access
           - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw3'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
           - interface range fa1/12 - 13
           - switchport access vlan 13
           - switchport mode access
           - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw3'
+
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
           - interface range fa1/2 - 3
           - switchport trunk encap dot1q
           - switchport mode trunk
           - description UPLINK
+          - exit
         save_when: modified
       when: inventory_hostname == 'sw3'
 
@@ -44,6 +62,7 @@
           - switchport trunk encap dot1q
           - switchport mode trunk
           - description UPLINK
+          - exit
         save_when: modified
       when: inventory_hostname == 'sw1'
 
@@ -55,26 +74,94 @@
           - switchport access vlan 15
           - switchport mode access
           - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
           - interface gi0/1
           - switchport access vlan 15
           - switchport mode access
           - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi0/1
+          - switchport access vlan 15
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
           - interface gi1/0
           - switchport access vlan 17
           - switchport mode access
           - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
           - interface gi1/1
           - switchport access vlan 17
           - switchport mode access
           - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
           - interface gi0/2
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi0/3
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range gi0/0 - 1
           - switchport trunk encap dot1q
           - switchport mode access
           - description UPLINK
-          - interface gi0/3
-          - switchport access vlan 15
+          - interface range gi0/3
+          - switchport trunk encap dot1q
           - switchport mode access
           - description UPLINK
         save_when: modified
-      when: inventory_hostname == 'sw6'
+      when: inventory_hostname == 'sw5'
 
