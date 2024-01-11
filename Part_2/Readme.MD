@@ -102,7 +102,10 @@ ssh -oHostKeyAlgorithms=ssh-rsa ansible@sw1
 How to Check MAC Address-Table on Switches with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts mac_address_table_3725_check.yml 
+ansible-playbook -i ansible_hosts mac_address_table_3725_check_count.yml 
+ansible-playbook -i ansible_hosts mac_address_table_vios_check.yml 
+ansible-playbook -i ansible_hosts mac_address_table_vios_check_count.yml 
 ```
 
 **********
