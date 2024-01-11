@@ -32,6 +32,21 @@
         save_when: modified
       when: inventory_hostname == 'sw1'
 
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface vlan 15
+          - no shutdown
+          - ip address 192.168.15.254 255.255.255.0
+          - description VLAN 15 - Accounting
+          - interface vlan 17
+          - no shutdown
+          - ip address 192.168.17.254 255.255.255.0
+          - description VLAN 17 - Engineering
+        save_when: modified
+      when: inventory_hostname == 'sw5'
+
     - name: Verification
       ios_command:
         provider: "{{ provider }}"
