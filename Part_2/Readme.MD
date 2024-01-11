@@ -137,18 +137,10 @@ ansible-playbook -i ansible_hosts interface_speed_duplex.yml
 
 **********
 
-How to Check Running-Config & Startup-Config and Save Configs with Ansible?
-
-```bash
-
-```
-
-**********
-
 How to Check Errors and CRC on Routers/Switches with Ansible?
 
 ```bash
-
+ansible-playbook -i ansible_hosts interface_CRC.yml
 ```
 
 **********
