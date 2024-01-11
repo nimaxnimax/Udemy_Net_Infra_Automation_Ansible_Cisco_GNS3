@@ -25,6 +25,13 @@
           - no shutdown
           - ip address 192.168.11.254 255.255.255.0
           - description VLAN 11 - Sales
+        save_when: modified
+      when: inventory_hostname == 'sw1'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
           - interface vlan 13
           - no shutdown
           - ip address 192.168.13.254 255.255.255.0
@@ -40,6 +47,13 @@
           - no shutdown
           - ip address 192.168.15.254 255.255.255.0
           - description VLAN 15 - Accounting
+        save_when: modified
+      when: inventory_hostname == 'sw5'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
           - interface vlan 17
           - no shutdown
           - ip address 192.168.17.254 255.255.255.0
