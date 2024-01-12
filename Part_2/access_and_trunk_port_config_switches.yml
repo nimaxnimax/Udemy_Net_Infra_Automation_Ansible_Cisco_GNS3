@@ -167,8 +167,20 @@
       ios_config:
         provider: "{{ provider }}"
         lines:
-          - interface gi0/1
-          - switchport access vlan 15
+          - interface gi0/2
+          - switchport access vlan 17
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi0/3
+          - switchport access vlan 17
           - switchport mode access
           - description PC
           - exit
@@ -180,30 +192,6 @@
         provider: "{{ provider }}"
         lines:
           - interface gi1/0
-          - switchport access vlan 17
-          - switchport mode access
-          - description PC
-          - exit
-        save_when: modified
-      when: inventory_hostname == 'sw6'
-
-    - name: Configuration
-      ios_config:
-        provider: "{{ provider }}"
-        lines:
-          - interface gi1/1
-          - switchport access vlan 17
-          - switchport mode access
-          - description PC
-          - exit
-        save_when: modified
-      when: inventory_hostname == 'sw6'
-
-    - name: Configuration
-      ios_config:
-        provider: "{{ provider }}"
-        lines:
-          - interface gi0/2
           - switchport trunk encap dot1q
           - switchport mode trunk
           - description UPLINK
@@ -215,7 +203,7 @@
       ios_config:
         provider: "{{ provider }}"
         lines:
-          - interface gi0/3
+          - interface gi1/1
           - switchport trunk encap dot1q
           - switchport mode trunk
           - description UPLINK
@@ -231,7 +219,7 @@
           - switchport trunk encap dot1q
           - switchport mode access
           - description UPLINK
-          - interface range gi0/3
+          - interface range gi1/1
           - switchport trunk encap dot1q
           - switchport mode access
           - description UPLINK
