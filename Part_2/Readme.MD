@@ -205,17 +205,15 @@ ansible-playbook -i ansible_hosts access_and_trunk_port_config_switches.yml
 
 How to Configure Default Gateway on L2 Switches with Ansible?
 
-**********
-
-How to Change Speed and Duplex Config on Routers and Switches with Ansible?
+```bash
+ansible-playbook -i ansible_hosts switch_default_gw_config.yml
+```
 
 **********
 
 How to Check Connectivity in the Network on Routers/Switches with Ansible?
 
-**********
-
-How to Configure Static Routing with Ansible?
-
-**********
+```bash
+ansible-playbook -i ansible_hosts cisco_ping_check.yml
+```
 
