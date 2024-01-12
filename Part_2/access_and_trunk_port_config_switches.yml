@@ -1,6 +1,6 @@
 ---
 - name: Manage GNS3 devices
-  hosts: switches
+  hosts: sw1, sw3, sw5, sw6
   gather_facts: false
   connection: local
  
@@ -237,4 +237,3 @@
           - description UPLINK
         save_when: modified
       when: inventory_hostname == 'sw5'
-
