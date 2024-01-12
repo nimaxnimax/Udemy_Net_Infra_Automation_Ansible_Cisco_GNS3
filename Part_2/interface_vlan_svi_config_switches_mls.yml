@@ -1,6 +1,6 @@
 ---
 - name: Manage GNS3 devices
-  hosts: sw1, sw3, sw5, sw6
+  hosts: sw1, sw5
   gather_facts: false
   connection: local
  
@@ -15,7 +15,7 @@
           username: "{{ creds['username'] }}"
           password: "{{ creds['password'] }}"
           auth_pass: "{{ creds['auth_pass'] }}"
-          timeout: 120
+          timeout: 30
 
     - name: Configuration
       ios_config:
@@ -69,3 +69,4 @@
       register: if_data
     - debug:
         var: if_data['stdout_lines'][0]
+
