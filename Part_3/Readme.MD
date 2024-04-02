@@ -17,7 +17,12 @@ Instructor & Courses >> https://www.udemy.com/user/adrian-fischer-infotech/
 
 ![Alt text](image.png)
 
-Diagram and Senario for this gns3 lab...
+GNS3 Cisco Lab Diagram
+
+Topics:
+- Router and Switch Configuration with Ansible YAML Files/Playbooks
+- How to Configure L2 Switch and L3 Switch (MLS)
+- How to Configure and Verify STP and RSTP
 
 **********
 
