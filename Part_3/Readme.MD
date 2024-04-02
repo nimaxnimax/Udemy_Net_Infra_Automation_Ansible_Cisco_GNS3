@@ -1,5 +1,5 @@
 
-![Alt text](image.png)
+![Alt text](cover.jpg)
 
 Udemy Course >> Network Infrastructure Automation Ansible Cisco GNS3 Part 3 (CCT/CCNA)
 
@@ -12,6 +12,12 @@ Ansible Automation YAML Network Administration Cisco Infrastructure Deployment P
 Tips/Tricks/Notes/Commands URL Link: https://github.com/nimaxnimax/Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3/
 
 Instructor & Courses >> https://www.udemy.com/user/adrian-fischer-infotech/
+
+**********
+
+![Alt text](image.png)
+
+Diagram and Senario for this gns3 lab...
 
 **********
 
