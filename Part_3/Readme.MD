@@ -422,6 +422,16 @@ By introducing these port types, RSTP improves upon the original STP by providin
 
 **********
 
+How to Verify and Configure STP on Switches
+
+```bash
+
+ansible-playbook -i ansible_hosts stp_summary_check.yml
+
+```
+
+**********
+
 Review Configuring Cisco Routers & Switches for Basic Connectivity (Console/Telnet) and Cisco IOS Automation with Ansible
 
 ```bash
