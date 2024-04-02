@@ -77,6 +77,49 @@ ansible-playbook -i ansible_hosts check_routing_table_static.yml
 
 **********
 
+How to Check Interfaces Connected to Routers or Switches - Asnbile YAML
+
+```bash
+
+ansible-playbook -i ansible_hosts cdp.yml
+ansible-playbook -i ansible_hosts cdp_check_sw1_sw2_sw3_example.yml
+
+```
+
+**********
+
+
+
+**********
+
+
+
+**********
+
+
+
+**********
+
+
+
+**********
+
+
+
+**********
+
+
+
+**********
+
+
+
+**********
+
+
+
+**********
+
 
 
 **********

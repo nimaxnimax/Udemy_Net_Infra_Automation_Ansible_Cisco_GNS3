@@ -1,6 +1,6 @@
 ---
 - name: Manage GNS3 Cisco LAB
-  hosts: routers,switches
+  hosts: sw1,sw2,sw3
   gather_facts: false
   connection: local
   
@@ -21,7 +21,7 @@
       ios_command:
         provider: "{{ provider }}"
         commands:
-          - show cdp neighbors
+          - show cdp neighbors | ex Fas 1/5
       register: if_data
     - debug:
         var: if_data['stdout_lines'][0]
