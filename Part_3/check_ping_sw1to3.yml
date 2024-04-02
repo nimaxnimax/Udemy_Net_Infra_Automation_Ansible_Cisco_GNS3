@@ -22,10 +22,33 @@
         provider: "{{ provider }}"
         commands:
           - ping 192.168.11.1
-          - ping 192.168.11.2
-          - ping 192.168.13.3
-          - ping 192.168.13.4
       register: if_data
     - debug:
         var: if_data['stdout_lines'][0]
 
+    - name: Verification
+      ios_command:
+        provider: "{{ provider }}"
+        commands:
+          - ping 192.168.11.2
+      register: if_data
+    - debug:
+        var: if_data['stdout_lines'][0]
+
+    - name: Verification
+      ios_command:
+        provider: "{{ provider }}"
+        commands:
+          - ping 192.168.13.3
+      register: if_data
+    - debug:
+        var: if_data['stdout_lines'][0]
+
+    - name: Verification
+      ios_command:
+        provider: "{{ provider }}"
+        commands:
+          - ping 192.168.13.4
+      register: if_data
+    - debug:
+        var: if_data['stdout_lines'][0]
