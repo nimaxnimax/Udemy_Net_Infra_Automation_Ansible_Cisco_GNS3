@@ -422,11 +422,13 @@ By introducing these port types, RSTP improves upon the original STP by providin
 
 **********
 
-How to Verify and Configure STP on Switches
+How to Verify and Configure STP on Switches 3725 Platform
 
 ```bash
 
 ansible-playbook -i ansible_hosts stp_summary_check.yml
+ansible-playbook -i ansible_hosts stp_vlan_check_c3725.yml
+ansible-playbook -i ansible_hosts stp_cost_config_interface_per_vlan.yml
 
 ```
 
