@@ -440,8 +440,8 @@ Example vIOS VIRL Image (L2 and L3 Switch) Trunk STP Verification Config
 
 ansible-playbook -i ansible_hosts cdp_check_sw4_sw5_sw6_example.yml
 ansible-playbook -i ansible_hosts interface_ip_address_check_sw4to6.yml
-ansible-playbook -i ansible_hosts interface_trunk_check_sw4to6.yml
 ansible-playbook -i ansible_hosts interface_trunk_config_sw4to6.yml
+ansible-playbook -i ansible_hosts interface_trunk_check_sw4to6.yml
 ansible-playbook -i ansible_hosts stp_summary_check_sw4to6.yml
 ansible-playbook -i ansible_hosts stp_mode_config_vios_switch.yml
 ansible-playbook -i ansible_hosts check_ping_sw4to6.yml

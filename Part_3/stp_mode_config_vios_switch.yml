@@ -21,6 +21,6 @@
       ios_config:
         provider: "{{ provider }}"
         lines:
-          - span mode rapid
           - span mode pvst
+          - span mode rapid
         save_when: modified
