@@ -22,11 +22,11 @@
         provider: "{{ provider }}"
         lines:
           - interface fa1/0
-          - stp vlan 1 cost 1
+          - spanning-tree vlan 1 cost 1
           - interface fa1/1
-          - stp vlan 1 cost 1
+          - spanning-tree vlan 1 cost 1
           - interface fa1/2
-          - stp vlan 1 cost 1
+          - spanning-tree vlan 1 cost 1
         save_when: modified
       when: inventory_hostname == 'sw1'
 
@@ -35,11 +35,11 @@
         provider: "{{ provider }}"
         lines:
           - interface fa1/0
-          - stp vlan 1 cost 1
+          - spanning-tree vlan 1 cost 1
           - interface fa1/1
-          - stp vlan 1 cost 1
+          - spanning-tree vlan 1 cost 1
           - interface fa1/3
-          - stp vlan 1 cost 1
+          - spanning-tree vlan 1 cost 1
         save_when: modified
       when: inventory_hostname == 'sw2'
 
@@ -48,9 +48,9 @@
         provider: "{{ provider }}"
         lines:
           - interface fa1/2
-          - stp vlan 1 cost 1000
+          - spanning-tree vlan 1 cost 1000
           - interface fa1/3
-          - stp vlan 1 cost 1000
+          - spanning-tree vlan 1 cost 1000
         save_when: modified
       when: inventory_hostname == 'sw3'
 
