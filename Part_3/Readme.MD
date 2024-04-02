@@ -29,11 +29,13 @@ Topics:
 Review Ansible Installation and Configuration + Git Repository
 
 ```bash
+
 sudo apt update -y
 sudo apt install ansible -y
 ansible --version
 sudo apt install git -y
 git clone https://github.com/nimaxnimax/Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3.git
+
 ```
 
 **********
@@ -41,13 +43,41 @@ git clone https://github.com/nimaxnimax/Udemy_Net_Infra_Automation_Ansible_Cisco
 GNS3 and How to Install and Configure Routers and Switches for Cisco Ansible Lab? And Play a YAML File
 
 ```bash
+
 cd Udemy_Net_Infra_Automation_Ansible_Cisco_GNS3/Part_3
 ls -anp
 cat ansible_hosts
 cat secrets.yml
 cat /etc/hosts
 ansible-playbook -i ansible_hosts arp.yml
+
 ```
+
+**********
+
+How to Check IP Address Config on Routers Switches - Ansible YAML
+
+```bash
+
+ansible-playbook -i ansible_hosts interface_ip_address.yml
+ansible-playbook -i ansible_hosts interface_svi_vlan_ip_address.yml
+
+```
+
+**********
+
+How to Check Routing Table on Routers and MLS Switches - Ansible YAML
+
+```bash
+
+ansible-playbook -i ansible_hosts check_routing_table.yml
+ansible-playbook -i ansible_hosts check_routing_table_static.yml
+
+```
+
+**********
+
+
 
 **********
 

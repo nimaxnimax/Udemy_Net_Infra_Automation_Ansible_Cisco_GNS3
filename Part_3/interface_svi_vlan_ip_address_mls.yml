@@ -1,6 +1,6 @@
 ---
 - name: Manage GNS3 Cisco LAB
-  hosts: routers, switches
+  hosts: mls
   gather_facts: false
   connection: local
   
@@ -21,8 +21,9 @@
       ios_command:
         provider: "{{ provider }}"
         commands:
-          - show arp
+          - show ip int bri | in Vlan
       register: if_data
     - debug:
         var: if_data['stdout_lines'][0]
+
 

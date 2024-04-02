@@ -21,7 +21,7 @@
       ios_command:
         provider: "{{ provider }}"
         commands:
-          - show arp
+          - show ip int bri | ex unassigned
       register: if_data
     - debug:
         var: if_data['stdout_lines'][0]

@@ -1,6 +1,6 @@
 ---
 - name: Manage GNS3 Cisco LAB
-  hosts: routers, switches
+  hosts: mls, routers
   gather_facts: false
   connection: local
   
@@ -21,8 +21,9 @@
       ios_command:
         provider: "{{ provider }}"
         commands:
-          - show arp
+          - show ip route static
       register: if_data
     - debug:
         var: if_data['stdout_lines'][0]
+
 
