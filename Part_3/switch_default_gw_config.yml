@@ -1,0 +1,31 @@
+---
+- name: Manage GNS3 devices
+  hosts: sw6
+  gather_facts: false
+  connection: local
+ 
+  tasks:
+    - name: Obtain Login Information
+      include_vars: secrets.yml
+
+    - name: Define Provider
+      set_fact:
+        provider:
+          host: "{{ ansible_host }}"
+          username: "{{ creds['username'] }}"
+          password: "{{ creds['password'] }}"
+          auth_pass: "{{ creds['auth_pass'] }}"
+          timeout: 30
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface vlan 15
+          - no shutdown
+          - ip address 192.168.15.251 255.255.255.0
+          - ip default-gateway 192.168.15.254
+          - ip route 0.0.0.0 0.0.0.0 192.168.15.254
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+

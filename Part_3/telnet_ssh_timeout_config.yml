@@ -1,0 +1,28 @@
+---
+- name: Manage GNS3 devices
+  hosts: sw1
+  gather_facts: false
+  connection: local
+ 
+  tasks:
+    - name: Obtain Login Information
+      include_vars: secrets.yml
+
+    - name: Define Provider
+      set_fact:
+        provider:
+          host: "{{ ansible_host }}"
+          username: "{{ creds['username'] }}"
+          password: "{{ creds['password'] }}"
+          auth_pass: "{{ creds['auth_pass'] }}"
+          timeout: 60
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - line vty 0 15
+          - session-timeout 1
+          - exec-timeout 1 0
+        save_when: modified
+

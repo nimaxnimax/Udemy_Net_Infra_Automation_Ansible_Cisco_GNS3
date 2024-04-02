@@ -1,0 +1,228 @@
+---
+- name: Manage GNS3 devices
+  hosts: sw1, sw3, sw5, sw6
+  gather_facts: false
+  connection: local
+ 
+  tasks:
+    - name: Obtain Login Information
+      include_vars: secrets.yml
+
+    - name: Define Provider
+      set_fact:
+        provider:
+          host: "{{ ansible_host }}"
+          username: "{{ creds['username'] }}"
+          password: "{{ creds['password'] }}"
+          auth_pass: "{{ creds['auth_pass'] }}"
+          timeout: 60
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/10
+          - switchport access vlan 11
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw3'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/11
+          - switchport access vlan 11
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw3'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/12
+          - switchport access vlan 13
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw3'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/13
+          - switchport access vlan 13
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw3'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/2
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw3'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/3
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw3'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/0
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw1'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/1
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw1'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/2
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw1'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range fa1/15
+          - switchport access vlan 11
+          - switchport access vlan 13
+          - switchport access vlan 1 
+          - switchport mode access
+          - no description
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw1'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi0/0
+          - switchport access vlan 15
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi0/1
+          - switchport access vlan 15
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi0/2
+          - switchport access vlan 17
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi0/3
+          - switchport access vlan 17
+          - switchport mode access
+          - description PC
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi1/0
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface gi1/1
+          - switchport trunk encap dot1q
+          - switchport mode trunk
+          - description UPLINK
+          - exit
+        save_when: modified
+      when: inventory_hostname == 'sw6'
+
+    - name: Configuration
+      ios_config:
+        provider: "{{ provider }}"
+        lines:
+          - interface range gi0/0 - 1
+          - switchport trunk encap dot1q
+          - switchport mode access
+          - description UPLINK
+          - interface range gi1/1
+          - switchport trunk encap dot1q
+          - switchport mode access
+          - description UPLINK
+        save_when: modified
+      when: inventory_hostname == 'sw5'
+
