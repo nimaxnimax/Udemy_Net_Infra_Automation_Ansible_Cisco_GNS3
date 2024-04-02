@@ -1,7 +1,7 @@
 
 ![Alt text](image.png)
 
-Udemy Course >> Network Infrastructure Automation with Ansible + Cisco (CCT/CCNA) GNS3 Part 3
+Udemy Course >> Network Infrastructure Automation Ansible Cisco GNS3 Part 3 (CCT/CCNA)
 
 **********
 
