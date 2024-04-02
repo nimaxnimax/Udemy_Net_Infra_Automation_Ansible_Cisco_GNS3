@@ -99,7 +99,13 @@ ansible-playbook -i ansible_hosts interface_trunk_check.yml
 
 **********
 
+Ansible and Ping Commands - How to Check IP Connectivity
 
+```bash
+
+ansible-playbook -i ansible_hosts check_ping_sw1to3.yml
+
+```
 
 **********
 
